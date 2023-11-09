@@ -17,7 +17,7 @@ public class MobilePhone {
     }
 
     public boolean addContact(Contact contact) {
-        if (findContact(contact.name()) > 0) {
+        if (findContact(contact.name()) >= 0) {
             System.out.println(contact.name() + " already exists.");
             return false;
         }
@@ -30,7 +30,7 @@ public class MobilePhone {
         if (position < 0) {
             System.out.println(oldContact.name() + " was not found.");
             return false;
-        } else if (findContact(newContact.name()) > 0) {
+        } else if (findContact(newContact.name()) >= 0) {
             System.out.println(newContact.name() + " already exists.");
             return false;
         }
